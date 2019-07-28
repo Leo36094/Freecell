@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  &__columns {
+    width: 100px;
+    height: 100%;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__cards {
+    &:not(:first-child) {
+      margin-top: -125%;
+    }
+  }
+}

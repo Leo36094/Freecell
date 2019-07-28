@@ -1,0 +1,32 @@
+$cards: card !default;
+
+.card {
+  width: 95px;
+  height: 145px;
+  border-radius: 5px;
+  background-size: contain;
+  // 梅花 ♣
+  @for $i from 1 through 13 {
+    &--#{$i} {
+      background-image: url('../../assets//cards_background/C#{$i}.png')
+    }
+  }
+  // 方塊 🔷
+  @for $i from 1 through 13 {
+    &--#{$i + 13 * 1} {
+      background-image: url('../../assets//cards_background/D#{$i}.png')
+    }
+  }
+  // 紅心 ❤️
+  @for $i from 1 through 13 {
+    &--#{$i + 13 * 2} {
+      background-image: url('../../assets//cards_background/H#{$i}.png')
+    }
+  }
+  // 黑桃 ♠
+  @for $i from 1 through 13 {
+    &--#{$i + 13 * 3} {
+      background-image: url('../../assets//cards_background/S#{$i}.png')
+    }
+  }
+}
