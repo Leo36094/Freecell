@@ -1,6 +1,9 @@
 .content {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  height: 490px;
   &__columns {
     width: 100px;
     height: 100%;

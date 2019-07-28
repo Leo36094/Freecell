@@ -1,0 +1,35 @@
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $color-primary-dark;
+    margin-right: 10px;
+  }
+  &__text {
+    letter-spacing: 1px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__button {
+    letter-spacing: 1px;
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+  }
+}
+
