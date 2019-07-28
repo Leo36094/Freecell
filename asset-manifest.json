@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/freecell/static/css/main.6753a401.chunk.css",
-    "main.js": "/freecell/static/js/main.5e7289e2.chunk.js",
-    "main.js.map": "/freecell/static/js/main.5e7289e2.chunk.js.map",
-    "runtime~main.js": "/freecell/static/js/runtime~main.10e4263b.js",
-    "runtime~main.js.map": "/freecell/static/js/runtime~main.10e4263b.js.map",
-    "static/js/2.f8927913.chunk.js": "/freecell/static/js/2.f8927913.chunk.js",
-    "static/js/2.f8927913.chunk.js.map": "/freecell/static/js/2.f8927913.chunk.js.map",
-    "index.html": "/freecell/index.html",
-    "precache-manifest.0b0b912710bfb9cd70c7405d393cc55b.js": "/freecell/precache-manifest.0b0b912710bfb9cd70c7405d393cc55b.js",
-    "service-worker.js": "/freecell/service-worker.js",
-    "static/css/main.6753a401.chunk.css.map": "/freecell/static/css/main.6753a401.chunk.css.map",
-    "static/media/style.module.scss": "/freecell/static/media/S9.66f91a64.png",
-    "static/media/info.svg": "/freecell/static/media/info.799e7a09.svg"
+    "main.css": "/Freecell/static/css/main.eb0cb6d4.chunk.css",
+    "main.js": "/Freecell/static/js/main.7d932f12.chunk.js",
+    "main.js.map": "/Freecell/static/js/main.7d932f12.chunk.js.map",
+    "runtime~main.js": "/Freecell/static/js/runtime~main.2b99f757.js",
+    "runtime~main.js.map": "/Freecell/static/js/runtime~main.2b99f757.js.map",
+    "static/js/2.f8927913.chunk.js": "/Freecell/static/js/2.f8927913.chunk.js",
+    "static/js/2.f8927913.chunk.js.map": "/Freecell/static/js/2.f8927913.chunk.js.map",
+    "index.html": "/Freecell/index.html",
+    "precache-manifest.959b74bb343353e60649f3a82632e79c.js": "/Freecell/precache-manifest.959b74bb343353e60649f3a82632e79c.js",
+    "service-worker.js": "/Freecell/service-worker.js",
+    "static/css/main.eb0cb6d4.chunk.css.map": "/Freecell/static/css/main.eb0cb6d4.chunk.css.map",
+    "static/media/style.module.scss": "/Freecell/static/media/S9.66f91a64.png",
+    "static/media/info.svg": "/Freecell/static/media/info.799e7a09.svg"
   }
 }
