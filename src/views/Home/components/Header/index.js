@@ -23,6 +23,8 @@ function Header(props) {
         <img
           src={require('../../../../assets/king_happy.png')}
           alt="king-icon"
+          width="60"
+          height="60"
         />
         <span>FREECELL</span>
       </div>
