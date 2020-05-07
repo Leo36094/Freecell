@@ -1,4 +1,7 @@
 import React from 'react';
+import Backend from 'react-dnd-html5-backend'
+import { DndProvider } from 'react-dnd';
+
 import classnames from 'classnames/bind';
 import styles from './style.module.scss';
 
@@ -12,9 +15,11 @@ const cx = classnames.bind(styles);
 function Home(props) {
   return (
     <div className={cx('home')}>
-      <Header className={cx('home__header')}/>
-      <Content />
-      <Footer />
+      <DndProvider backend={Backend}>
+        <Header className={cx('home__header')}/>
+        <Content />
+        <Footer />
+      </DndProvider>
     </div>
   );
 }

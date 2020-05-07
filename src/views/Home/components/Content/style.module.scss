@@ -10,6 +10,9 @@
     &:not(:last-child) {
       margin-right: 30px;
     }
+    &--active {
+      background-color: #573921;
+    }
   }
   &__cards {
     &:not(:first-child) {

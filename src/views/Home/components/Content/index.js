@@ -1,52 +1,78 @@
-import React from 'react';
-import classnames from 'classnames/bind';
-import styles from './style.module.scss';
+import React, { useState } from 'react'
+import { useDrop } from 'react-dnd'
+
+import classnames from 'classnames/bind'
+import styles from './style.module.scss'
 
 // components
-import Card from '../../../../components/Card';
+import Card from '../../../../components/Card'
 
-const cx = classnames.bind(styles);
+const cx = classnames.bind(styles)
 
 // variables / functions
-const allCards = [...new Array(52)].map((_, index) => index + 1);
+const allCards = [...new Array(52)].map((_, index) => index + 1)
 // Create 8 columns with array to preserve space for cards.
-const columns = [];
+const columns = []
 for (let i = 0; i < 8; i++) {
-  columns.push([]);
+  columns.push([])
 }
 
-const shuffle = array => {
+const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    let j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  return array;
-};
+  return array
+}
 
-const shuffledCards = shuffle(allCards);
+const shuffledCards = shuffle(allCards)
 
 const columnWithCards = columns.map((column, index) => {
   if (index < 4) {
-    column = [...column, ...shuffledCards.slice(7 * index, 7 * (index + 1))];
+    column = [
+      ...column,
+      ...shuffledCards.slice(7 * index, 7 * (index + 1)),
+    ]
   } else
-    column = [...column, ...shuffledCards.slice(6 * index, 6 * (index + 1))];
-  return column;
-});
+    column = [
+      ...column,
+      ...shuffledCards.slice(6 * index, 6 * (index + 1)),
+    ]
+  return column
+})
 
-// * Function below is testing for shuffledCards
-
-// const hashTable = {}
-// shuffledCards.forEach(item => {
-//   if(!hashTable[item]) hashTable[item] = 0
-//   hashTable[item] ++
-// })
-// console.log(hashTable)
+// Component
+const Column = (props) => {
+  const [{ isOver, canDrop }, drop] = useDrop({
+    accept: 'card',
+    drop: (item) => {
+      console.log('item', item)
+    },
+    collect: (monitor) => ({
+      isOver: monitor.isOver(),
+      canDrop: monitor.canDrop(),
+    }),
+  })
+  const isActive = isOver && canDrop
+  return (
+    <div
+      ref={drop}
+      className={cx(
+        'content__columns',
+        `${isActive ? 'content__columns--active' : ''}`,
+      )}
+      {...props}
+    />
+  )
+}
 
 function Content(props) {
+  const [cardColumns, setCardColumns] = useState(columnWithCards)
+
   return (
     <div className={cx('content')}>
-      {columnWithCards.map((column, index) => (
-        <div className={cx('content__columns')} key={`${column}column`}>
+      {cardColumns.map((column, index) => (
+        <Column key={`${index}column`}>
           {column.map((card, index) => (
             <Card
               className={cx('content__cards')}
@@ -54,10 +80,10 @@ function Content(props) {
               cardNumber={card}
             />
           ))}
-        </div>
+        </Column>
       ))}
     </div>
-  );
+  )
 }
 
-export default Content;
+export default Content
